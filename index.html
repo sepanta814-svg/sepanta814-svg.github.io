@@ -1,0 +1,174 @@
+display: flex;
+    }
+
+    .menu-btn {
+        display: inline-block;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .profile {
+        width: 210px;
+        height: 210px;
+        font-size: 65px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="logo">My Website.</div>
+
+    <ul class="nav-links" id="menu">
+        <li><a href="#home">خانه</a></li>
+        <li><a href="#about">درباره من</a></li>
+        <li><a href="#skills">مهارت‌ها</a></li>
+        <li><a href="#projects">علاقه‌مندی‌ها</a></li>
+        <li><a href="#contact">ارتباط</a></li>
+    </ul>
+
+    <div class="controls">
+        <button onclick="toggleTheme()">☀️</button>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
+</header>
+
+<main class="container">
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">به وب‌سایت شخصی من خوش آمدید</span>
+
+        <h1>سلام، من <span>نام شما</span> هستم.</h1>
+
+        <p>
+            به دنیای شخصی من خوش آمدید.
+            اینجا می‌توانید با من، مهارت‌ها،
+            علاقه‌مندی‌ها و فعالیت‌هایم آشنا شوید.
+        </p>
+
+        <a href="#about" class="btn">بیشتر درباره من</a>
+    </div>
+
+    <div class="profile">👨🏻‍💻</div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">درباره من</h2>
+    <p class="section-desc">کمی بیشتر با من آشنا شوید</p>
+
+    <div class="about">
+        من فردی علاقه‌مند به یادگیری، فناوری و دنیای
+        دیجیتال هستم. همیشه تلاش می‌کنم چیزهای جدید
+        یاد بگیرم و ایده‌هایم را به واقعیت تبدیل کنم.
+
+        <br>
+        این وب‌سایت برای معرفی من و فعالیت‌هایم ساخته شده است.
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">مهارت‌های من</h2>
+    <p class="section-desc">زمینه‌هایی که به آن‌ها علاقه دارم</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="emoji">💻</div>
+            <h3>فناوری</h3>
+            <p>علاقه‌مند به کامپیوتر و تکنولوژی</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌐</div>
+            <h3>طراحی وب</h3>
+            <p>یادگیری طراحی و ساخت وب‌سایت</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🚀</div>
+            <h3>یادگیری</h3>
+            <p>علاقه‌مند به پیشرفت و تجربه‌های جدید</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">علاقه‌مندی‌های من</h2>
+    <p class="section-desc">چیزهایی که دوست دارم</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="emoji">⚽</div>
+            <h3>ورزش</h3>
+            <p>دنبال کردن دنیای ورزش</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🎮</div>
+            <h3>بازی</h3>
+            <p>علاقه‌مند به بازی‌های ویدیویی</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">📚</div>
+            <h3>مطالعه</h3>
+            <p>یادگیری مطالب و موضوعات جدید</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">ارتباط با من</h2>
+    <p class="section-desc">از طریق راه‌های زیر می‌توانید با من در ارتباط باشید</p>
+
+    <div class="contact">
+        <p>ایمیل: <a href="mailto:example@email.com">example@email.com</a></p>
+        <p>اینستاگرام: <a href="#">آدرس صفحه من</a></p>
+        <p>خوشحال می‌شوم با شما در ارتباط باشم!</p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © <span id="year"></span> تمامی حقوق محفوظ است.
+    <br>
+    طراحی شده با ❤️
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("light");
+}
+
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("menu").classList.remove("show");
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+</body>
+</html>s
